@@ -7,20 +7,21 @@
 <meta name="description" content="Mojtaba Fathi's personal website" />
 <meta name="keywords" content="Moji" />
 <link rel="stylesheet" type="text/css" href="style.css" />
-<title>Simple Template #2 - simpletemplates.org</title>
+<title>Moji's Corner - RVDS Software</title>
 </head>
 <body>
 
 <div id="top">
 
 <div id="header">
-<h1>Railway Vehicle Dynamics Simulation (RVDS)</h1>
+<h1>Moji's Corner - RVDS Software</h1>
 </div>
 
 <div id="topmenu">
 <ul>
 <li><a href="http://mfathi.info">Home</a></li>
-<li><a href="#">Portfolio</a></li>
+<li><a href="http://mfathi.info/medes">Mechanical Design</a></li>
+<li><a href="http://mfathi.info/swdev">Software Development</a></li>
 <li><a href="#">Contact Me</a></li>
 </ul>
 </div>
@@ -33,27 +34,40 @@
 
 <div class="cright">
 
-<h2>Simple Template #2 from simpletemplates.org</h2>
+<h2>Railway Vehicle Dynamics Simulation (RVDS) Software</h2>
+<!--
 <img style="float: left; margin: 0 20px 0 0;" src="doc.png" alt="doc" />
+-->
+<p><div align="center"><a href="rvds01-full.png" target="_blank">
+<img src="rvds01-half.png" alt="RVDS software environment" width="512" height="384" align="middle"/>
+</a></div></p>
 <p>
-Second template from Simple Templates is featuring a header with h1 tag suitable for site name and floating menu on the right. Content area consists of two columns. On the right there is a menu with categories and links and on the right you will find main content area where you can put article body.
+RVDS software was developed by a team of three engineers. I was the head of the team and also did most of the programming myself. The software was developed for a railway wagon manufacturing company for their research purposes.
+
+It was decided to develop the software as a general purpose dynamics simulation software which could also be used for railway vehicle dynamics simulation. For this reason, the simulation engine of the software was developed based on <em>Multi-Body Dynamics</em> method.
+
+The software contains the primitive body shapes <em>Box</em>, <em>Cone</em>, and <em>Sphere</em>. The geometrical parameters of each type of body can be set individually. The moments of inertia of the primitive bodies can be either calculated according to their mass and geometry or set by the user. The initial position, orientation, velocity, and angular velocity of each body can be specified. RVDS also contains specialized bodies for railway vehicle dynamics simulation purposes (<em>Straight Rail</em>, <em>Wheelset</em>, and <em>Simple Bogie Frame</em>). The user can define the surface profiles of the right sides of wheelsets and rails as series of points which are later fitted with cubic smoothing splines. The surface profiles of the right sides and the left sides are assumed to be symmetrical.
 </p>
+<p><div align="center"><a href="rvds02-full.png" target="_blank">
+<img src="rvds02-half.png" alt="Defining the surface profile of the right rail" width="512" height="384" align="middle"/>
+</a></div></p>
 <p>
-No images were used for a design. This is pure xhtml/css template with some added css3 rounded corners.
+The software provides primitive constraints <em>Revolute</em>, <em>Spherical</em>, and <em>Point Path</em>. In addition, there are specialized constraints for Wheel-Rail Contact modeling. This constraint is used to simulate the 3D contact points and forces in between the wheelsets and the rails according to the previously defined surface profiles. This constraint can also detect <a href="https://en.wikipedia.org/wiki/Derailment" target="_blank">derailment</a> after which the simulation is stopped.
+
+The last element needed for dynamics simulation is external force/torque. The software provides primitive force/torque elements <em>Constant Force</em>, <em>Constant Torque</em>, <em>Linear Spring/Damper,</em> and <em>Linear Bushing</em>.
+
+In addition to the global coordinate system, each body has its own local coordinate system. It is also possible to add more local coordinate systems to each body which may later be used for attaching constraints and/or force elements. The local coordinate systems are useful for repositioning the bodies too.
+
+The software has an <em>Assemble </em>feature which is used for assembling the model with respect to the constraints. It is necessary to make sure are constraints are satisfied before starting the simulation. The initial position, orientation, velocity, and angular velocity of every object may be altered due to assembling unless it is explicitly declared to remain unaffected. Then, the <em>Run</em> feature can be used for real-time simulation of motion. A small dialog box appears on the screen which displays the simulation time. The 3D view is also updated to reflect the movements. Optionally, an output log file can be generated upon request to save the results of simulation for all simulation steps and model elements. The generated file may be loaded later and investigated within the software.
+
+The list of all elements included in the model and their associated properties and attached local coordinates is shown in a dedicated <em>Property Editor</em> window. This feature helps the user view and modify the elements of the model much easier. The model built can be saved to a file and restored later. The 3D view provides <em>Pan Real-time</em>, <em>Zoom Real-time</em>, <em>Zoom Into Window</em>, <em>Rotate Real-time</em>, <em>Zoom In</em>, <em>Zoom Out</em>, and <em>Reset View</em> features. There are also quick access buttons for predefined views. The whole scene can be viewed as either wire frame or solid. It is also possible to set the view mode for each element individually. Each visual element can be hidden or even excluded from the model temporarily.
 </p>
 
 <div class="clear"> </div>
 
-<h2>License &amp; Terms of Use</h2>
-<p>
-All templates published and available for free from simpletemplates.org are released and licensed under <a href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0 Unported (CC BY 3.0)</a> license.
-</p>
-<p>
-All we ask is for you to keep the link to simpletemplates.org in the footer intact or credit us in some other way.
-</p>
-<p>
-If you do not want to link back to simpletemplates.org you can buy link free license option that is available on each <a href="http://www.simpletemplates.org/simple-website-template-2.html">template download page</a>. For more information you can always contact us at contact@simpletemplates.org.
-</p>
+<div align="center"><h2><a href="RVDS Demo Setup.exe">
+Download The Demo Version Installer
+</a></h2></div>
 
 </div>
 
@@ -61,8 +75,8 @@ If you do not want to link back to simpletemplates.org you can buy link free lic
 
 <h3>Quick Access</h3>
 <ul>
-<li><a href="http://mfathi.info/portfolio/swdev/rvds">Railway Vehicle Dynamics Simulation</a></li>
-<li><a href="http://mfathi.info/portfolio/swdev/mto">Materials Take-Off</a></li>
+	<li><a href="/swdev/rvds">Railway Vehicle Dynamics Simulation <b>(RVDS)</b></a></li>
+	<li><a href="/swdev/mto">Materials Take-Off <b>(MTO)</b></a></li>
 </ul>
 
 </div>
